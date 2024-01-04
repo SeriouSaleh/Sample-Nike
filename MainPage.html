@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nike/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="styles/style2.css">
+    <title>Nike UI</title>
+</head>
+<body>
+    <div class="Mrn">
+        <nav class="navbar navbar-expand-lg mb-2 bg-body-tertiary w-100 " >
+            <div class="container-fluid ">
+              <button class="navbar-toggler col-4 position-absolute" id="Navbar-togeller" style="height: 30px; right: 10%; " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse col-5 " style="background-color: white;z-index: 99;"  id="navbarNavDropdown" dir="rtl">
+                <ul class="navbar-nav fourImportantElements">  
+                  <div id="Navbar_closer" style="border: 0px solid gray; color: #D2C418;font-size: 12px;cursor: pointer;">Close</div>
+                  <li class="nav-item">
+                    <button class="login-open-button "><sup>Log in</sup> </button>
+                  </li>
+                  <span class="mr1-sm body-4 dash Dash" data-var="storeLocatorSeparator">|</span>
+                  <li class="nav-item">
+                    <a class="nav-link navbarItem-list1" href="#">Join Us</a>
+                  </li>
+                  <span class="mr1-sm body-4 dash Dash" data-var="storeLocatorSeparator">|</span>
+                  <li class="nav-item dropdown dropdown-name">
+                    <a class="nav-link dropdown-toggle navbarItem-list1 dropdown-menu-list1" href="#" role="button"style="font-size: 12px;">
+                        Help
+                      </a>
+                      <ul class="dropdown-menu" style="min-width: 240px;">
+                        <li><a class="dropdown-item headermenu-dropdown-item" href="#" style="text-decoration-style: none;">Help</a></li>
+                        <li><a class="dropdown-item" href="#">Order Status</a></li>
+                        <li><a class="dropdown-item" href="#">Shipping & Delivery</a></li>
+                        <li><a class="dropdown-item" href="#">Returns</a></li>
+                        <li><a class="dropdown-item" href="#">Order Cancellation</a></li>
+                        <li><a class="dropdown-item" href="#">Size Charts</a></li>
+                        <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                        <li><a class="dropdown-item" href="#">Terms of Sale</a></li>
+                        <li><a class="dropdown-item" href="#">Terms of Use</a></li>
+                        <li><a class="dropdown-item" href="#">Send Us Feedback</a></li>
+                      </ul>
+                  </li>
+                  <span class="mr1-sm body-4 dash  Dash" data-var="storeLocatorSeparator">|</span>
+                  <li class="nav-item">
+                    <a class="nav-link navbarItem-list1" href="#">Find a Store</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- Login-Modal start -->
+          
+          <dialog class="Login-modal row " id="Login-modal">
+            <div class="col-12 ">
+              <div class="row pt-4">
+                <div class="col-3">
+                  <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="50" viewBox="0 0 75 60">
+                    <defs>
+                      <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 225 225">
+                        <image width="225" height="225" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAAD5+fnr6+uEhITx8fHAwMDY2NjS0tJnZ2fPz8/g4OD09PSvr6/8/PxERESenp6bm5t9fX3l5eXHx8czMzNbW1u6urqMjIyoqKhNTU1vb289PT2zs7N2dnYrKyscHBwLCwsWFhaQkJAkJCRJSUlTU1NhYWEUF5brAAADf0lEQVR4nO3b63aqMBBA4QYQVNSKoqLWW23t+7/hES9HkSBBEqBd+/vfTKaMySTo2xsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH9aa+XXPQWDrPZ+JxZ23dMwxRsehBCOtvx6ugbSwp4tj9mJbV/fkK2ZvrFKGnSdrzg9cXB1DnvQOVgJXrAQZ6Ox1oGXgdbhXmP3fy7Zie3Q0jv2XNT9MbRCZ3JNT3N5xrpirXvIIgbt4F3cLPWWZ8wSItQ+qKrxfCruDVsGgnwLYWBUBS13lMhOfJhZ0SNRS5GG0UcyPfHTNhRJVF+k/kNpxvYmyjPWikevciW1V51UdmKyMhcwXsU+zA2fZIXRJJ2e6HQNxgziCNV8DL3hQpKdzt5axj/FmJsMcWL3JaUZ2841Ny+PNqcw2luIBKu738jTE1PjS9z+HMgzF8ELDhnZHctTf/PyyL+EMnRNYK+Wmdkdy3NgJmrCxFyGljv6yk5PfJv9YFwF13iaq3RwO+TJjSq6W7L/R9S5HcnalaSgsv7iNhNdu0XPXe9y0nuv8LYkvKsaHeN5iUOe3LLSq8/tLfCm7Fj+MK80Y8Z6a7n+fewy/9rWbK2QndHeWi4RPnpxkMH97cozU0NHvyeC5AxeaQ79jE46TfPFoJqHOTgF//zYSe8U09uZ7q3lho/zKLAl9kJnK0tF6r2a5iUt/QAUD2kqe8JNx2BP/9wsPZnP/BTHWYe8DBXvDgmPt1wnT89qPXekXpqxKpuXNF8+qVHWktAOvgtld2xeaivPsyhrYpKm+PFOWkVUY3mePZncdH733x/P1ln3D9k2Gt9qvsrLm2Nn7YyWh13h5I5+TF4MKsss0tLMXgyqU2slC9tUcvOiomckv2aU51mYP93CooaU59lcd3qTBqyeCUoHVnXTBpXnRbHmMkctR788qufWfJ/1HP1ySdvuFxzq+3pDDj3PsILXKi/T8Dn8aszmLuWUzc/8W7+SJAf8Ippcnhd2fhaZGl6eV0XukhIWTS/PqxfLtJGbe4bPF/LT/YVPs/IO+SlNOhqpSV15P9Wso5Ei9YuMj/6vWD3TFJ9i3feeZXT/8OO7sJ73pzvnD/zcqJ299Tu/bvHM0JU9x0lU/Stpg3ru+n7/Pzhu7e8cDLB8L1yt3LZf989KAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo6x8YxCUVQaWIJAAAAABJRU5ErkJggg=="/>
+                      </pattern>
+                    </defs>
+                    <rect id="nikeLogo" width="75" height="60" fill="url(#pattern)"/>
+                  </svg>
+                </div>
+                <div class="col-3"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="50" viewBox="0 0 67 60">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect id="Rectangle_4" data-name="Rectangle 4" width="67" height="60" rx="20" transform="translate(689 127.921)" fill="#fff" stroke="#707070" stroke-width="1"/>
+                    </clipPath>
+                  </defs>
+                  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-689 -127.921)" clip-path="url(#clip-path)">
+                    <g id="Jumpman_logo" transform="translate(689 130.659)">
+                      <path id="Path_2" data-name="Path 2" d="M47.346,32.772a2.723,2.723,0,0,1-.052-.366,3.3,3.3,0,0,1,3.312-3.339,3.447,3.447,0,0,1,3.812,2.9,3.3,3.3,0,0,1-3.311,3.339,3.664,3.664,0,0,1-.368.006.414.414,0,0,0-.2.08c-.2.276.515.225.027,1.433a.844.844,0,0,1-.057.265c-.038.464-.242,1.838-.271,2.57.1.106.132.158.121.415a15.415,15.415,0,0,1-.284,1.746.943.943,0,0,1-.518.672,10.48,10.48,0,0,1-.947,2.949,3.372,3.372,0,0,1-.343,1.571,5.918,5.918,0,0,1-.932,3.59,4.575,4.575,0,0,0,.263,2.657c.282,1.039,1.065,1.473,1.181,2.538a13.985,13.985,0,0,1-.408,6.177l.536,1.112c.665.267,2.315,1,1.4,2.153a24.209,24.209,0,0,1,4.84,2.426,16.954,16.954,0,0,1,1.94,1.588A3.574,3.574,0,0,1,59,69.959a69.6,69.6,0,0,1,8.975,5.986c.407.208.572.358.9.508.051.086.065.106.054.13-.113.25-.109.257-.211.457a6.043,6.043,0,0,0,.507.346c.132.036.132-.019.361-.068a1.8,1.8,0,0,0,.8.427c.4-.09.333-.017.673-.349.122-.11.327,0,.327,0a3.078,3.078,0,0,1,.767-.581,2.539,2.539,0,0,1,.848-.167c.186,0,.151.169.135.223a6.756,6.756,0,0,0-.907.362,6.64,6.64,0,0,0-.972,1.161c1.1-.131,1.773.107,2.688.015a2.375,2.375,0,0,0,1.392-.329,6.264,6.264,0,0,1,.955-.48,1.332,1.332,0,0,1,1.241.168c.272.269.437.271.022.651-.15.148-.367.313-.642.552a20.972,20.972,0,0,1-1.813,1.441,11.391,11.391,0,0,1-1.945,1.081,12.329,12.329,0,0,0-1.9,1.331c-.121.095-.443.265-.6.356-.379.218-.5.036-.745-.363a5.22,5.22,0,0,1-.3-.468c-.2-.348-.357-.745-.3-.739a3.684,3.684,0,0,1-1.256-1.3,3.942,3.942,0,0,1-1.175-.978l-.819-.575c-.937.17-1.153-.339-3.629-1.878a2.759,2.759,0,0,1-1.344-.544c-1.117-.784-3.8-2.557-4.252-2.76a8.971,8.971,0,0,1-1.429-.681c-.536-.086-.829-.136-1.1-.2a7.563,7.563,0,0,0-1.217-.232,12,12,0,0,1-3.414-1.021c-.527-.219-.987-.331-1.441-.5a20.15,20.15,0,0,0-2.569-.853,9.245,9.245,0,0,1-2.13-.674,2.979,2.979,0,0,0-.5-.226,1.233,1.233,0,0,0-.708.094c-.826.377-1.6.7-2.314,1.039-.665.311-1.277.635-1.926.962-.585.3-1.261.575-1.956.866,0,0-1.982.87-3.064,1.208a36.4,36.4,0,0,1-4.03,2.409c-.58.242-1.707.867-2.227,1.007-.3.209-1.354.87-2.181,1.414-.639.419-1.122.772-1.122.772-.371.292-.346.43-1.052.167-.2.141-.347.229-.474.31-.51.324-.553.246-.74.237-.356.27-.4.13-.711.44-.2.277,0,.211-.426.345-.091.031-.134.127-.2.18-.346.25-.347.955-1.177,1.006-.48.3-.357.662-.724.646.022.311-.649.765-.77.764-1.057.32-1.131-.362-2.4.147a2.85,2.85,0,0,1-.722.3,2.444,2.444,0,0,1-1.644-.283,5.992,5.992,0,0,1-1.244-1.281c-.206-.426-.086-.7.556-1.1a1.269,1.269,0,0,1,.767-.288c.223-.074.162.039.561-.086a2.716,2.716,0,0,1,.7-.056,2.242,2.242,0,0,1,.457-.143c.368-.106.727-.225.727-.225s.094-.082.448-.053c.3-.108.607-.267.765-.316-.04-.416.011-.4.231-.564.274-.207.324-.173.528-.045.086-.044.127-.059.118-.122-.034-.217-.246-.318-.182-.8-.094-.191-.233-.427-.2-.57s.088-.228.194-.277.15.018.211.078a1.364,1.364,0,0,1,.2.437c.038.369.169.846.585.577.246-.218.293-.8.794-.674l.357.272a2.248,2.248,0,0,1,.5-.35s-.284-.251-.035-.447a5.188,5.188,0,0,0,.741-.582,19.547,19.547,0,0,1,2.6-2.181,25.608,25.608,0,0,1,6.189-3.2,2.805,2.805,0,0,1,2.138-1.039,15.443,15.443,0,0,1,4.514-4.051c.481-.764.69-.683,1.32-.836.5-.35.612-.35.836-.716.217-.755-.5-2.773,1.331-2.875a7.878,7.878,0,0,1,.726-.821,6.238,6.238,0,0,1-.494-1.621c-.014-.053-.727-.493-.525-1.067a8.593,8.593,0,0,1-1.046-1.4,1.741,1.741,0,0,1-.237-.036c-.092-.013-.207-.008-.336-.018-.285.645-.6.693-1.1.835a7.1,7.1,0,0,1-3.787,3.8,5.439,5.439,0,0,0-1.338,2.092,1.394,1.394,0,0,0-.021,1.038c-.134.366-.1.4-.1.4a.612.612,0,0,0,.379.36c.308.071.616.06.6.36-.041.376-.6.314-.871.272-1.025-.143-.7-.728-1.357-.532-.5.288-.69,1.137-1.51,1.026-.108-.063-.075-.248,0-.382.115-.209.319-.383.2-.461-.532.147-1.6.457-1.6.457-.5.12-1.052-.1-.558-.388a5.071,5.071,0,0,0,.963-.4s.209-.249-.191-.124a4.425,4.425,0,0,1-1.543.177,8.759,8.759,0,0,1-1.081-.176c-.124-.066-.237-.325.062-.324a11.168,11.168,0,0,0,2.066-.267c.356-.121,1.032-.472,1.411-.637a3.032,3.032,0,0,1,.638-.628c.378-.381.7-.606,1.031-1a17.236,17.236,0,0,1,1.747-2.974,14.21,14.21,0,0,1,1.905-2.14,3.433,3.433,0,0,1,1.221-1.9,13.949,13.949,0,0,1,.9-1.515c.131-.194.255-.363.379-.547a2.371,2.371,0,0,1,1.878-1.37,4.37,4.37,0,0,0,.729-.582c.316-.236.244-.6.5-.862-.392-.335-1.395-.965-1.492-1.84a2.548,2.548,0,0,1,.915-2.258,3.192,3.192,0,0,1,2.371-.887,2.388,2.388,0,0,1,1.714.8c.347.31.477.11.623.473.954.222.9.124.893.739.147.173.392.334.389.693a3.116,3.116,0,0,1,1.241-1.331c.2-.521.34-1.033.518-1.554.167-.482.374-.978.535-1.351-.171-1.053.18-1.227.647-2.15-.083-.127-.065-.163-.03-.371.182-.61.466-1.417.634-1.944a.326.326,0,0,1,.3-.225c.214-.666.534-1.906.588-2.159a1.457,1.457,0,0,0-.091-1.313c-.054-.128-.029-.311-.123-.454-.266-.406-.553-.934-.747-1.311a8.266,8.266,0,0,1-.326-1.145c-.169-.462-.021,0-.021,0" transform="translate(-11.132 -29.059)"/>
+                    </g>
+                  </g>
+                  </svg>
+                </div>
+                <div class="col-6"></div>
+              </div>
+            </div>
+            <div class="col-12   " style="font-size: 22px;font-weight: 500; text-align: center; ">
+              Enter your email to join us or sign in
+              <div style="font-size: 14px; text-align: start;padding-left: 7px;"><span>iran (islamic republic of)</span><span><a href="" style="text-decoration: none;color: gray;"><u> Change</u></a></span></div>
+            </div>
+            
+            <div class="col-12">
+              <form action="" style="height: 50px;">
+                <input  id="login-CHECKOUT" type="text" placeholder="Email" style="width: 100%;height: 50px;padding-left: 10px; border: 1px solid rgb(94, 94, 94);border-radius: 10px ">
+              </form>
+            </div>
+            <div class="col-12  ps-3" style="color: gray; font-weight: 400;">by <a style="text-decoration: none;color: gray; cursor: pointer;"><u>continuing</u></a>, i agree to Nike's  <a style=" cursor: pointer; text-decoration: none;color: gray;"><u>Privacy policy</u></a> and Terms of Use</div>
+            <div class="col-12  text-center"><button class="Login-modal-button Login-close-button"style=" font-size: 14px;border:1px solid gray; width:75px; height: 40px; line: height 40px;" >Continue</button></div>
+          </dialog>
+
+       
+
+          <!-- Login Modal end -->
+          <!--main-Navbar-->
+          
+          <div class="mainNavbar d-flex row" style="width: 100%;">
+            <div class="mainNavbar-item d-flex col-12 col-xl-2  justify-content-center " >
+              <a class="brandSvg ms-4 ps-3" href="#">
+                <img src="images/download.png" alt="nike-brandsvg" width="82px" height="70px" style="padding-right: 20px;">
+              </a>
+            </div>
+            <div class="mainNavbar-item mb-2 d-flex col-12 col-xl-7 justify-content-center "  > 
+              <ul class="mainNavbar-menu d-flex justify-content-end  gap-3">
+                <li class="mainNavbar-menuItems" style="height: 30px; font-size: 14px;">
+                  <div class="dropdown text-center">
+                    <button class="item1 btn sliderButton1 Main-navbar-item-style position-static" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="links" href="#">New & Featured</a>
+                    </button>
+                    <ul class="dropdown-menu   dropdown-mainMenu1">
+                      <div class="mainContainer-inMainMenu">
+                        <div class="container-inMainMenu">
+                          <ul class="item1-list1">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New & Featured</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New Arrivals</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Best Sellers</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Member Exclusive</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New in Jordan</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Members - Find Your Air Max</a></li>
+                          </ul>
+                          <ul class="item1-list2">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Limitted Time</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New Markdowns - Up to 40% Off</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Last Chance Sale</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-List3">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Shop Icons</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Force</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Jordan 1</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Max</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Blazer</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Pegasus</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Meton</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">LeBron</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Tech Fleece</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-list4">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Men</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                          <ul class="item1-list5">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Women</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                          <ul class="item1-list6">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Kids</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-list7">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Drops</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New & Upcoming Drops</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Get 'Em in SNKRS</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">SNKRS Launch Calendar</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Jordan Heat Check</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Latest In Jordan Clothing</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Dunks</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">NikeLab</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Drops 101</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mainNavbar-menuItems" style="height: 30px; font-size: 14px;">
+                  <div class="dropdown" style="float:inline-end !important;" >
+                    <button class="item2 btn sliderButton2 Main-navbar-item-style position-static"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="links" href="#">Men</a>
+                    </button>
+                    <ul class="dropdown-menu  dropdown-mainMenu2 ">
+                      <div class="mainContainer-inMainMenu">
+                        <div class="container-inMainMenu active">
+                          <ul class="item1-list1">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New & Featured</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New Arrivals</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Best Sellers</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Member Exclusive</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New in Jordan</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Members - Find Your Air Max</a></li>
+                          </ul>
+                          <ul class="item1-list2">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Limitted Time</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New Markdowns - Up to 40% Off</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Last Chance Sale</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-List3">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Shop Icons</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Force</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Jordan 1</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Max</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Blazer</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Pegasus</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Meton</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">LeBron</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Tech Fleece</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-list4">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Men</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                          <ul class="item1-list5">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Women</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                          <ul class="item1-list6">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Kids</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-list7">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Drops</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New & Upcoming Drops</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Get 'Em in SNKRS</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">SNKRS Launch Calendar</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Jordan Heat Check</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Latest In Jordan Clothing</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Dunks</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">NikeLab</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Drops 101</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mainNavbar-menuItems" style="height: 30px; font-size: 14px;">
+                  <div class="dropdown" style="float:inline-end !important;" >
+                    <button class="item3 btn sliderButton3 Main-navbar-item-style position-static" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="links" href="#">Women</a>
+                    </button>
+                    <ul class="dropdown-menu   dropdown-mainMenu3">
+                      <div class="mainContainer-inMainMenu">
+                        <div class="container-inMainMenu active">
+                          <ul class="item1-list1">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New & Featured</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New Arrivals</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Best Sellers</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Member Exclusive</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New in Jordan</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Members - Find Your Air Max</a></li>
+                          </ul>
+                          <ul class="item1-list2">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Limitted Time</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">New Markdowns - Up to 40% Off</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Last Chance Sale</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-List3">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>Shop Icons</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Force</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Jordan 1</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Air Max</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Blazer</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Pegasus</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Meton</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">LeBron</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Tech Fleece</a></li>
+                          </ul>
+                        </div>
+                        <div class="container-inMainMenu">
+                          <ul class="item1-list4">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Men</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                          <ul class="item1-list5">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Women</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                          <ul class="item1-list6">
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#"><b>New For Kids</b></a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li class="itemsInList-mainNavbar"><a class="dropdown-item" href="#">Clothing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mainNavbar-menuItems" style="height: 30px; font-size: 14px;">
+                  <a class="btn links Main-navbar-item-style" style="padding-top: 6px;" href="#">Kids</a>
+                </li>
+                <li class="mainNavbar-menuItems" style="height: 30px; font-size: 14px;">
+                  <a class="btn links Main-navbar-item-style" style="padding-top: 6px;" href="#">Accessories</a>
+                </li>
+                <li class="mainNavbar-menuItems" style="height: 30px; font-size: 14px;">
+                  <a class= "btn links Main-navbar-item-style" style="padding-top: 6px;" href="#">Sale</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mainNavbar-item d-flex col-12 col-xl-3 justify-content-center ps-5" >
+              <div class="container1">
+                <div class="mt-3">
+                  <form class="items" action="">
+                    <i class="position-absolute fa-solid fa-magnifying-glass" style="padding-left: 10px;padding-top: 22px;"></i>
+                    <input class="searchInput" type="text"id="Search-box" autofocus placeholder=" search" style="padding-left: 30px;">
+                  </form>
+                </div>
+                <a class="items links" class="" href="#">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+                <a class="items links" href="#">
+                  <i class="fa-solid fa-basket-shopping"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!--Shop Image -->    
+          <div class="Black-friday row position-relative" style="width: 100%;">
+            <div class="col-12 d-flex justify-content-center text-center">
+              <img src="images/Component 2 – 1.png" style="width: 80%;" alt="Black-friday">
+            </div>
+            <div class="col-10"></div>
+                <button class="Shop_Button  button-m text-center position-absolute"><p>Shop</p></button>
+          </div>
+          <!--first-paragraph-->
+          
+          <div class="nikeAirMaxPluse-Sentences " style="text-align: center;">
+            <div class="head-nikeAirMaxPluse">
+              <p class="one-word"><b>First Look</b></p>
+              <h3 style="font-size: 3rem;">NIKE AIR MAX PLUSE</h3>
+            </div>
+            <div class="nikeAirMaxPluse-Paragraph1"><p>Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pluse</p></div>
+            <div class="nikeAirMaxPluse-Paragraph2"><p>_designed to push you past your limits and help you go to the max.</p></div>
+            <div class="nikeAirMaxPluse-button col-7 col-sm-5 col-lg-3 col-xl-2 d-flex text-center">
+              <div class="d-flex flex-row flex-wrap   nikeAirMaxPluse-item ">
+                <div class="text-centersection-title button-m nikeAirMaxPluse-item2">Best of Air Max</div>
+              </div>
+              <div class="d-flex flex-row flex-wrap justify-content-center align-content-center text-center nikeAirMaxPluse-item">
+                <div class="text-center  align-items-center button-m nikeAirMaxPluse-item">Shop</div>
+            </div>
+          </div>
+          <!--slider-->
+          <div class="secondSlider-controls row ">
+            
+            <div class="secondSlider-explain secondslider-item col-5 col-lg-3 " ><h3 class="secondSlider-word">Best Of Air Max</h3></div>
+            <div class="secondSlider-controls secondslider-item col-3 d-flex justify-content-around  ">
+              <div
+              class="swiper-button-prev swiper-button-prev-shoe position-absolute  controler"
+              ></div>                                                                                     
+              <div                                                                                              
+              class="swiper-button-next swiper-button-next-shoe position-absolute  controler"
+              ></div>
+            </div>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper gap-4" style="width: 100%;">
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="first slide" >
+                  <a href="nike-template/nike-template/product.html"> <img src="images/10.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$150</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="second slide" >
+                  <a href="nike-template/nike-template/product2.html"> <img src="images/Image 1.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="therd slide" >
+                  <a href="nike-template/nike-template/product.html"> <img src="images/10.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="forth slide" >
+                  <a href="nike-template/nike-template/product2.html"> <img src="images/Image 1.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="five slide" >
+                  <a href="nike-template/nike-template/product.html"> <img src="images/10.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="six slide" >
+                  <a href="nike-template/nike-template/product2.html"> <img src="images/Image 1.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="seven slide" height="400px" >
+                  <a href="nike-template/nike-template/product.html"> <img src="images/10.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="eight slide" >
+                  <a href="nike-template/nike-template/product2.html"> <img src="images/Image 1.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiperSlide">
+                <div class="d-block w-75 card sliderItem-cards" style="width: 18rem;" alt="nine slide" >
+                  <a href="nike-template/nike-template/product.html"> <img src="images/10.jpg" class="card-img-top slider-images-bestOfAirMax" alt="product-bestOfAirMax-cards" style="height: 320px !important;"></a>
+                  <div class="card-body">
+                    <div>
+                      <div class="sliderProduct">
+                        <h4 class="productName itemsInSlider">Nike Air Max Pluse</h4>
+                        <p class="productPrice itemsInSlider">$180</p>
+                      </div>
+                      <p class="maleOrFemale">Womans Shoes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!--Featured-section-->
+          <div class="product-featured">
+            <div class="featured-word featured-item">
+              <h3 class="featured-word1">Featured</h3>
+            </div>
+            <div class="featured-image featured-item">
+              <img class="featured-image1   d-flex justify-content-center" src="images/1.jpg" alt="featured-image" width="96%" height="40%" >
+            </div>
+          </div>
+          <!--second-paragraph-->
+          <div class="motivational-Sentences text-center" style="text-align: center;">
+            <div class="head-feeling-of-running"><h3 style="font-size: 3rem;">STEP INTO WHAT FEELS GOOD</h3></div>
+            <div class="motivational-Paragraph"><p>Cause everyone should know the feeling of running in that perfect pair.</p></div>
+            <div class="motivational-button">
+              <a class="button-m" href="" >Find Your Shoe</a>
+            </div>
+          </div>
+    </div>
+    <div class="Sj w-100">
+            <div class="dont_miss  d-flex justify-content-center gap-0">
+                <div class="row gap-0 position-relative" style="width: 100%;">
+                    <p class="row h3 position-absolute start-0 ps-4 mb-5 mt-2 py">Dont Miss</p>
+                    <div class="col-12  gap-0 m-0 p-0 mt-5 pt-5 d-flex justify-content-center">
+                      <img style="width: 80%;" class=" dont_miss_img d-flex justify-content-center" src="images/Dont-Miss.jpg" alt="Dont-Miss">
+                    </div>
+                </div>
+            </div>
+            <div class="Essentials_container row" style="width: 100%;">
+                <div class="col-12 text-center fw-bold fs-1 mt-5"><p>FLIGHT ESSENTIALS</p></div>
+                <div class="col-12 text-center fw-semibold "style="font-size :12px;"><p>Your built-to-last,all-week wears<sup>__</sup>but with style only Jordan Brands can deliver</p></div>
+                <div class="col-12 text-center mb-5"><button id="Essentials_container_button" type="button" class="btn btn-dark radi rounded-5">Shop</button></div>
+                <div class="col-12 text-start  mt-5 ps-3 fw-bold fs-5">THE ESSENTIALS</div>
+                <div class="col-12 d-flex justify-content-center flex-wrap gap-0 mt-2 px-2 px-md-5 m-0 h-auto">
+                    <div class="col-12 col-md-4 px-md-0 px-5 d-flex justify-content-center gap-0 position-relative ">
+                        <img style="width:95%;" src="images/Men's.jpg" alt="Men's">
+                        <button type="button" class="essential-button btn btn-light  start-75 rounded-5 px-4 ">Men's</button>
+                    </div>
+                    <div class="col-12 col-md-4 px-md-0 px-5 d-flex justify-content-center gap-0 position-relative">
+                        <img style="width:95%;" src="images/Women's.jpg" alt="Women's">
+                        <button type="button" class="essential-button btn btn-light  start-75 rounded-5 px-4">Women's</button>
+                    </div> 
+                    <div class="col-12  col-md-4 px-md-0 px-5 d-flex justify-content-center gap-0  position-relative">
+                        <img style="width:95%;" src="images/Kid's.jpg" alt="Kid's">
+                        <button type="button" class="essential-button btn btn-light  start-75 rounded-5 px-4">Kid's</button>
+                    </div>
+                </div>
+            </div>
+        <div class="downer-nav row " style="width: 100%;">
+                <div class="col-md-2 col-1"></div>
+                <div class="mother-menu col-md-8 col-10" id="downer-nav-container">
+                  <div class="row me-5 pe-5 mt-5">  
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 mb-4"><h5 style="font-weight: 400;">Icon's</h5></div>
+                        <div class="col-12"></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Air Force 1</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Huarache</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Air Max 90</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Air Max 95</a></div>
+                    </div>
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 mb-4"><h5 style="font-weight: 400;">shoes</h5></div>
+                        <div class="col-12"></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="" style="font-style: normal;">All Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Custom Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Jordan Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Running Shoes</a></div>
+                    </div>
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 mb-4"><h5 style="font-weight: 400;">clothes</h5></div>
+                        <div class="col-12"></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">All Clothing</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Modest Wear</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Hoodies & Pullovers</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Shirts & Tops</a></div>
+                    </div>
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 mb-4"><h5 style="font-weight: 400;">kid's</h5></div>
+                        <div class="col-12"></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Infant & Toddler Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Kids' Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Kids' Jordan Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Kids' Basketball Shoes</a></div>
+                    </div>
+                  </div>
+                  <div  class="hidden-menu row me-5 pe-5 mb-5 ">  
+                    <div class="row">
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Air Force 1</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Huarache</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Air Max 90</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Air Max 95</a></div>
+                    </div>
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 link"><a class="text-decoration-none" href="">All Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Custom Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Jordan Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Running Shoes</a></div>
+                    </div>
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 link"><a class="text-decoration-none" href="">All Clothing</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Modest Wear</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Hoodies & Pullovers</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Shirts & Tops</a></div>
+                    </div>
+                    <div class="col-6 col-lg-3 lh-lg">
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Infant & Toddler Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Kids' Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Kids' Jordan Shoes</a></div>
+                        <div class="col-12 link"><a class="text-decoration-none" href="">Kids' Basketball Shoes</a></div>
+                    </div>
+                    </div>
+                  </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <div class="Footer row ps-4 pt-5" style="width: 100%;">
+            <div class="col-md-2">
+                <div class="col-12 link "><a class="text-decoration-none text-light" href="">FIND A STORE</a></div>
+                <div class="col-12 link"><a  class="text-decoration-none text-light" href="">BECOME A MEMBER</a></div>
+                <div class="col-12 link"><a  class="text-decoration-none text-light" href="">Send Us Feedback</a></div>
+                <div class="col-12 link"><a  class="text-decoration-none text-light" href="">STUDENT DISCOUNTS</a></div>
+                <div class="col-md-2"></div>
+            </div>
+            <hr class="text-light d-md-none mt-5">
+            <div class="col-12 col-md-3 text-light mt-5 mt-md-0">
+                <div class="row">
+                    <div class="col-11 col-md-12 fw-bold">Get Help</div>
+                    <div id="button-open-menu1" class="col-1 text-light fs-4 fw-bold pe-4">+</div>
+                    <div id="button-close-menu1" class="col-1 text-light fs-4 fw-bold pe-4">-</div>
+                </div>
+                <div id="Footter-menun1" class="row" >
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Order Status</a></div>
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Delivery</a></div>
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Returns</a></div>
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Payment Options</a></div>
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Contact Us On Nike.com Inquiries</a></div>
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Contact Us On All Other Inquiries</a></div>
+                </div>
+            </div>                    
+            <div class="col-12 col-md-2 text-light my-3 mt-md-0">
+                <div class="row">
+                    <div class="col-11 col-md-12 fw-bold">About Nike</div>
+                    <div id="button-open-menu2" class="col-1 text-light fs-4 fw-bold pe-4">+</div>
+                    <div id="button-close-menu2" class="col-1 text-light fs-4 fw-bold pe-4">-</div>
+                </div>
+                <div id="Footter-menun2" class="row">    
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">News</a></div>                    
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Careers</a></div>
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Investors</a></div>
+                    <div class="col-12  py-md-2"><a class="text-decoration-none menu" href="">Sustainability</a></div>
+                </div>        
+            </div>
+            <div class="col-2"></div>
+            <div class="col-md-2">    
+                <div class="row pe-md-5 justify-content-start">    
+                    <div class="col-1 col-md-3">
+                        <div class="icon-circle">
+                            <svg class="social-link-icon" width="30px" fill="#111" height="30px" viewBox="0 0 24 24">
+                                <path d="M12 0C9.813 0 7.8.533 5.96 1.6A11.793 11.793 0 0 0 1.6 5.96C.533 7.8 0 9.813 0 12s.533 4.2 1.6 6.04a11.793 11.793 0 0 0 4.36 4.36C7.8 23.467 9.813 24 12 24s4.2-.533 6.04-1.6a11.793 11.793 0 0 0 4.36-4.36C23.467 16.2 24 14.187 24 12s-.533-4.2-1.6-6.04a11.793 11.793 0 0 0-4.36-4.36C16.2.533 14.187 0 12 0zm6 9.28v.4c0 1.387-.333 2.72-1 4a8.186 8.186 0 0 1-2.84 3.12c-1.333.853-2.827 1.28-4.48 1.28a8.535 8.535 0 0 1-4.56-1.28h.72c1.387 0 2.613-.427 3.68-1.28-.64 0-1.213-.2-1.72-.6-.507-.4-.867-.92-1.08-1.56l.56.16c.373 0 .64-.053.8-.16a2.67 2.67 0 0 1-1.72-1 2.913 2.913 0 0 1-.68-1.88c.427.267.88.4 1.36.4-.907-.533-1.36-1.36-1.36-2.48 0-.533.133-1.04.4-1.52.8.96 1.72 1.707 2.76 2.24a8.133 8.133 0 0 0 3.4.88c-.107-.16-.16-.4-.16-.72 0-.8.293-1.493.88-2.08s1.28-.88 2.08-.88 1.547.293 2.24.88c.48-.107 1.12-.347 1.92-.72-.213.747-.64 1.28-1.28 1.6H18c.747-.16 1.28-.32 1.6-.48-.533.693-1.067 1.253-1.6 1.68z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-1 col-md-3">
+                        <div class="icon-circle">
+                            <svg class="social-link-icon" width="30px" fill="#111" height="30px" viewBox="0 0 24 24"><path d="M12 0C9.813 0 7.8.533 5.96 1.6A11.793 11.793 0 0 0 1.6 5.96C.533 7.8 0 9.813 0 12s.533 4.2 1.6 6.04a11.793 11.793 0 0 0 4.36 4.36C7.8 23.467 9.813 24 12 24s4.2-.533 6.04-1.6a11.793 11.793 0 0 0 4.36-4.36C23.467 16.2 24 14.187 24 12s-.533-4.2-1.6-6.04a11.793 11.793 0 0 0-4.36-4.36C16.2.533 14.187 0 12 0zm3.12 12h-2v7.2H10.4V12H8.64V9.52h1.76V8c0-1.12.187-1.92.56-2.4.427-.587 1.2-.88 2.32-.88h2V7.2h-1.2c-.427 0-.693.067-.8.2-.107.133-.16.387-.16.76v1.2h2.16L15.12 12z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-1 col-md-3">
+                        <div class="icon-circle">
+                            <svg class="social-link-icon" width="30px" fill="#111" height="30px" viewBox="0 0 24 24"><path d="M11.28 17.6a.604.604 0 0 1-.2.24.43.43 0 0 1-.24.08c-.08 0-.133-.027-.16-.08a.557.557 0 0 1-.04-.24v-2.96h-.72v3.28a1 1 0 0 0 .12.52c.08.133.2.2.36.2.16 0 .307-.053.44-.16.133-.107.28-.24.44-.4v.48H12v-3.92h-.72v2.96zM6.96 14v-.8H9.6v.8h-.88v4.56h-.88V14h-.88zm4.96-4.72c-.107 0-.2-.04-.28-.12a.384.384 0 0 1-.12-.28v-2.4c0-.053.027-.107.08-.16.053-.053.147-.08.28-.08.133 0 .24.027.32.08a.27.27 0 0 1 .12.24v2.32c0 .107-.04.2-.12.28a.384.384 0 0 1-.28.12zm2 8.32c0-.64.027-1.307.08-2 0-.107-.04-.2-.12-.28-.08-.08-.16-.12-.24-.12h-.12l-.24.16v2.4l.24.16.16.08c.107 0 .173-.027.2-.08.027-.053.04-.16.04-.32zm.08-3.04c.213 0 .387.08.52.24.133.16.2.4.2.72v2.24c0 .267-.053.48-.16.64a.422.422 0 0 1-.44.2 2.1 2.1 0 0 1-.48-.12.506.506 0 0 1-.28-.24v.32h-.8V13.2h.8v1.76c.107-.107.213-.2.32-.28a.532.532 0 0 1 .32-.12zm3.92 5.12c.267-.213.427-.907.48-2.08.053-.587.107-1.147.16-1.68 0-.48-.053-1.013-.16-1.6-.107-1.173-.28-1.893-.52-2.16-.24-.267-1.267-.453-3.08-.56l-2.64-.08-2.72.08c-1.813.107-2.84.293-3.08.56-.24.267-.413.987-.52 2.16a16.07 16.07 0 0 0-.08 1.6c0 .533.027 1.093.08 1.68.107 1.173.28 1.88.52 2.12.24.24 1.267.44 3.08.6l2.72.08 2.64-.08c1.813-.16 2.853-.347 3.12-.56v-.08zM8.4 4h-.96l1.12 3.6v2.24h.96v-2.4L10.64 4h-.96l-.56 2.32h-.08L8.4 4zm2.32 2.56V8.8c0 .373.107.667.32.88.213.213.507.32.88.32s.667-.107.88-.32c.213-.213.32-.507.32-.88V6.56c0-.32-.107-.587-.32-.8-.213-.213-.507-.32-.88-.32s-.667.107-.88.32c-.213.213-.32.48-.32.8zm3.12-.96v3.6a1 1 0 0 0 .12.52c.08.133.213.2.4.2.187 0 .36-.04.52-.12.16-.08.32-.2.48-.36v.48h.88V5.6h-.88v3.2a.523.523 0 0 1-.24.24.645.645 0 0 1-.28.08c-.08 0-.133-.013-.16-.04-.027-.027-.04-.093-.04-.2V5.52h-.8v.08zM12 0c2.187 0 4.2.533 6.04 1.6a11.793 11.793 0 0 1 4.36 4.36C23.467 7.8 24 9.813 24 12s-.533 4.2-1.6 6.04a11.793 11.793 0 0 1-4.36 4.36C16.2 23.467 14.187 24 12 24s-4.2-.533-6.04-1.6a11.793 11.793 0 0 1-4.36-4.36C.533 16.2 0 14.187 0 12s.533-4.2 1.6-6.04A11.793 11.793 0 0 1 5.96 1.6C7.8.533 9.813 0 12 0zm4.56 16.08l-.08-.4c0-.16-.027-.28-.08-.36a.27.27 0 0 0-.24-.12.27.27 0 0 0-.24.12c-.053.08-.08.2-.08.36v.4h.72zm-.32-1.52c.32 0 .573.093.76.28.187.187.28.467.28.84v.96h-1.44v.8c0 .16.027.28.08.36.053.08.147.12.28.12.133 0 .227-.04.28-.12.053-.08.08-.227.08-.44v-.16h.72v.24c0 .373-.093.667-.28.88-.187.213-.453.32-.8.32-.347 0-.613-.107-.8-.32-.187-.213-.28-.507-.28-.88v-1.76c0-.32.107-.587.32-.8.213-.213.48-.32.8-.32z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-1 col-md-3">
+                        <div class="icon-circle">
+                            <svg class="social-link-icon" width="30px" fill="#111" height="30px" viewBox="0 0 24 24"><path d="M16 12.48a4.723 4.723 0 0 1-.56 1.48 3.93 3.93 0 0 1-1.04 1.16 3.428 3.428 0 0 1-1.92.68 3.628 3.628 0 0 1-1.96-.48 3.414 3.414 0 0 1-1.4-1.48c-.48-.96-.587-1.973-.32-3.04H7.68l.08 5.52c0 .107.04.213.12.32.08.107.173.16.28.16h8.32c.107 0 .213-.053.32-.16.107-.107.16-.213.16-.32V10.8h-1.12c.16.533.213 1.093.16 1.68zm-3.68 2c.64 0 1.2-.24 1.68-.72s.72-1.053.72-1.72a2.56 2.56 0 0 0-.68-1.76c-.453-.507-1.013-.76-1.68-.76s-1.24.24-1.72.72-.72 1.053-.72 1.72.227 1.253.68 1.76c.453.507 1 .76 1.64.76h.08zm4.16-7.6h-1.12c-.107 0-.213.053-.32.16-.107.107-.16.213-.16.32v1.36c.107.213.267.32.48.32h1.12c.16 0 .28-.053.36-.16a.532.532 0 0 0 .12-.32v-1.2c0-.107-.053-.213-.16-.32-.107-.107-.213-.16-.32-.16zM12 0C9.813 0 7.8.533 5.96 1.6A11.793 11.793 0 0 0 1.6 5.96C.533 7.8 0 9.813 0 12s.533 4.2 1.6 6.04a11.793 11.793 0 0 0 4.36 4.36C7.8 23.467 9.813 24 12 24s4.2-.533 6.04-1.6a11.793 11.793 0 0 0 4.36-4.36C23.467 16.2 24 14.187 24 12s-.533-4.2-1.6-6.04a11.793 11.793 0 0 0-4.36-4.36C16.2.533 14.187 0 12 0zm6.24 16.88l-.08.08v.08a.926.926 0 0 1-.28.68 1.3 1.3 0 0 1-.68.36H7.52a.871.871 0 0 1-.68-.32 1.536 1.536 0 0 1-.36-.72l-.08-.16.08-9.84c0-.267.093-.507.28-.72.187-.213.413-.347.68-.4h9.68a1.3 1.3 0 0 1 .68.36 1.3 1.3 0 0 1 .36.68l.08 9.92z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="Footer-footer mt-3 py-4">
+                <div class="row">
+                    <div class="col-6 col-md-1 text-light"><a class="text-decoration-none text-light" href="https://www.nike.com/language_tunnel">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="15" height="15" viewBox="0 0 256 256" xml:space="preserve">
+                        <defs>
+                        </defs>
+                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                            <path d="M 45 0 C 27.677 0 13.584 14.093 13.584 31.416 c 0 4.818 1.063 9.442 3.175 13.773 c 2.905 5.831 11.409 20.208 20.412 35.428 l 4.385 7.417 C 42.275 89.252 43.585 90 45 90 s 2.725 -0.748 3.444 -1.966 l 4.382 -7.413 c 8.942 -15.116 17.392 -29.4 20.353 -35.309 c 0.027 -0.051 0.055 -0.103 0.08 -0.155 c 2.095 -4.303 3.157 -8.926 3.157 -13.741 C 76.416 14.093 62.323 0 45 0 z M 45 42.81 c -6.892 0 -12.5 -5.607 -12.5 -12.5 c 0 -6.893 5.608 -12.5 12.5 -12.5 c 6.892 0 12.5 5.608 12.5 12.5 C 57.5 37.202 51.892 42.81 45 42.81 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(254, 254, 254); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        </g>
+                        </svg>india</a>
+                    </div>
+                    <div class="col-6 col-md-3 text-light-emphasis "> © 2023 Nike, Inc. All Rights Reserved</div>
+                    <div class="col"></div>
+                    <div class="Guide-option col-12 col-md-1 py-2 py-md-0 terms">Guides
+                        <div class="row Guides-modal">
+                          <div class="col-4">
+                            <div class="col-12">Nike Adapt</div>
+                            <div class="col-12">Nile Air MAx</div>
+                            <div class="col-12">Nike Flyleather</div>
+                            <div class="col-12">Nike Pegasus</div>
+                            <div class="col-12">Nike Zoom Fly</div>
+                          </div>
+                          <div class="col-4">
+                            <div class="col-12">Nike Air</div>
+                            <div class="col-12">Nike FlyEase</div>
+                            <div class="col-12">Nike Free</div>
+                            <div class="col-12">Nike Rract</div>
+                            <div class="col-12">Nike ZoomX</div>
+                          </div>
+                          <div class="col-4">
+                            <div class="col-12">Nike Air Force 1</div>
+                            <div class="col-12">Nike FlyKnit</div>
+                            <div class="col-12">Nike Joyride</div>
+                            <div class="col-12">Nike Vaporfly</div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-1 py-2 py-md-0 terms">Terms of Sale</div>
+                    <div class="col-12 col-md-1 py-2 py-md-0 terms">Terms of Use</div>
+                    <div class="col-12 col-md-2 py-2 py-md-0 terms">Nike Privacy Policy</div>
+                </div>
+            </div>  
+        </div>      
+    </div>
+</div>
+<script src="login-modal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="bootstrap/bootstrap.bundle.js"></script>
+<script src="js Files/javascript.js"></script>
+<script src="js Files/js1.js"></script>
+</body>
+</html>
